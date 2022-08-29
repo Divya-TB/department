@@ -143,10 +143,10 @@ module.exports.getone = async (data) => {
      
         if(result.length>0){
           
-                return ({ "status": 200, "success_status": true, "response": " Assistant list", "info": result });
+                return ({ "status": 200, "success_status": true, "response": " list", "info": result });
 
             } else {
-                return ({ "status": 201, "success_status": true, "response": " Assistant list doest not exist", "info": result });
+                return ({ "status": 201, "success_status": true, "response": "  list doest not exist", "info": result });
     
             }
             
