@@ -105,10 +105,13 @@ module.exports = app => {
     *       - name: head_id
     *         in: formData
     *         type: integer
-    
+    *         required: true
+
+
     *       - name: assistant_id
     *         in: formData
     *         type: integer
+    *         required: true
    
     *     responses:
     *         200:

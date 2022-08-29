@@ -4,7 +4,7 @@ const client = require('twilio')(accountSid, authToken);
 
 module.exports.removedmessage = async(data)=> {
     try{
-    console.log(data)
+   
      client.messages
         .create({
            body: `You have been removed from department '${data.depno}' as a '${data.job}' `,

@@ -56,7 +56,7 @@ module.exports.updatedep =  async (req)=>{
          if(is_exist.status === 200 || exist.status === 200){
       
             if(req.body.head_id != is_exist.info[0].head_id){
-             
+            
               await sms.removedmessage({phone:is_exist.info[0].head_phone, depno: is_exist.info[0].depno, job : 'head'});
               await sms.addedmessages({phone:exist.info[0].head_phone, depno: exist.info[0].depno,job : 'head'});
 
@@ -64,7 +64,7 @@ module.exports.updatedep =  async (req)=>{
          
            
             if(req.body.assistant_id != is_exist.info[0].assistant_id){
-           
+             
               await sms.removedmessage({phone:is_exist.info[0].assistant_phone,depno:is_exist.info[0].depno, job : 'assistant'});
               await sms.addedmessages({phone:exist.info[0].assistant_phone,depno:exist.info[0].depno,job : 'assistant'});
             }
