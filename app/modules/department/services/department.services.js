@@ -1,4 +1,4 @@
-const Query = require('../Query/department.query')
+const Query = require('../query/department.query')
 const sms = require('../../../lib/sms')
 
 
