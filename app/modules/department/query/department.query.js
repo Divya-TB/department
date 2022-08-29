@@ -120,7 +120,7 @@ module.exports.getone = async (data) => {
     const DB = await connectToDatabase()
     try {
         const result = await DB.Models.Department.findAll({
-            attributes:['id','head_id','assistant_id',[Sequelize.col('head.phone'), 'head_phone'],[Sequelize.col('assistant.phone'), 'assistant_phone']],
+            attributes:['depno','head_id','assistant_id',[Sequelize.col('head.phone'), 'head_phone'],[Sequelize.col('head.job'), 'head'],[Sequelize.col('assistant.phone'), 'assistant_phone'],[Sequelize.col('assistant.job'), 'assistant']],
            include:[
            {
                     model:DB.Models.Employee,

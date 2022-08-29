@@ -97,19 +97,17 @@ module.exports = app => {
     * 
     * 
     *       - in: path
-    *         name: id   
+    *         name: dep_id   
     *         required: true
     *         type: integer
     
    
     *       - name: head_id
     *         in: formData
-   
     *         type: integer
     
     *       - name: assistant_id
     *         in: formData
-   
     *         type: integer
    
     *     responses:

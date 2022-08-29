@@ -4,19 +4,19 @@ const client = require('twilio')(accountSid, authToken);
 
 module.exports.removedmessage = async(data)=> {
     try{
-    
-        client.messages
+    console.log(data)
+     client.messages
         .create({
-           body: 'You have been removed from department ',
+           body: `You have been removed from department '${data.depno}' as a '${data.job}' `,
            from: '+19287664388',
-           to: data
+           to: `+91${data.phone}`
            
          })
-        .then(message => console.log(message.sid));
+        .then(message => console.log(message.sid))
     }
     catch(err){
-        console.log("----- error ----- :", error)
-        return error
+        console.log("----- error ----- :", err)
+        return err
     }
   
 } 
@@ -27,9 +27,9 @@ module.exports.addedmessages = async(data)=> {
 
         client.messages
         .create({
-           body: 'You have been to  department ',
+           body: `You have been added to  department '${data.depno}' as a '${data.job}' `,
            from: '+19287664388',
-           to: data
+           to: `+91${data.phone}`
          })
         .then(message => console.log(message.sid));
     }
